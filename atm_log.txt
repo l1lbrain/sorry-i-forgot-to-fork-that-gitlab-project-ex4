@@ -1,0 +1,43 @@
+Current ATM money is 10000000
+CustomerId: 123456, balance: 10000000
+Current ATM money is 9800000
+Insufficient Balance
+Current ATM money is 9800000
+Current ATM money is 10800000
+Current ATM money is 10000000
+CustomerId: 5000000, balance: 5000000
+Current ATM money is 9800000
+Insufficient Balance
+Current ATM money is 9800000
+Current ATM money is 10800000
+Current ATM money is 10000000
+CustomerId: 123, balance: 1000000
+Current ATM money is 9800000
+Insufficient Balance
+Current ATM money is 9800000
+Current ATM money is 10800000
+Current ATM money is 100000000
+CustomerId: 123, balance: 1000000
+Current ATM money is 99800000
+Insufficient Balance
+Current ATM money is 99800000
+Current ATM money is 100800000
+Current ATM money is 10000000
+CustomerId: ABC, balance: 12000000
+Current ATM money is 9800000
+ATM is out of money
+Current ATM money is 9800000
+Current ATM money is 10800000
+Current ATM money is 100000000
+CustomerId: abc\, balance: 12000000
+Current ATM money is 99800000
+Current ATM money is 89800000
+Current ATM money is 90800000
+Current ATM money is 100000000
+CustomerId: abc, balance: 10000000
+--- Đang thực hiện giao dịch: RÚT TIỀN (200000) ---
+Current ATM money is 99800000
+--- Đang thực hiện giao dịch: RÚT TIỀN (10000000) ---
+Insufficient Balance
+Current ATM money is 99800000
+Current ATM money is 100800000

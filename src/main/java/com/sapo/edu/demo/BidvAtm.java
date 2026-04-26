@@ -1,14 +1,25 @@
 package com.sapo.edu.demo;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 import java.math.BigDecimal;
 
+@Component
 public class BidvAtm implements Atm {
-    private BigDecimal moneyAtm = new BigDecimal(1000000);
+    private BigDecimal moneyAtm;
 
-    private Printer printer = new PrinterConsole();
+    private Printer printer;
+
+    //Dùng @Value để lấy dữ liệu từ application.yml (constructor injection)
+    public BidvAtm(@Value("${atm.bidv.initial-money}") BigDecimal initialMoney, Printer printer) {
+        this.moneyAtm = initialMoney;
+        this.printer = printer;
+    }
 
     @Override
     public void withDraw(Customer customer, BigDecimal amount) {
+        printer.printMessage("--- Đang thực hiện giao dịch: RÚT TIỀN (" + amount + ") ---");
         if (amount == null || amount.compareTo(new BigDecimal(0)) < 0) {
             printer.printMessage("Amount is invalid");
             return;
