@@ -1,0 +1,4 @@
+atm:
+  bidv:
+    initial-money: 100000000 # 100 triệu
+    finish-message: "Giao dich ket thuc! Kiem tra atm_log.txt de xem log giao dich."

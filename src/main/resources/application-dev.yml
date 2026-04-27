@@ -1,0 +1,4 @@
+atm:
+  bidv:
+    initial-money: 10000000 # 10 triệu
+    finish-message: "Giao dich ket thuc!"

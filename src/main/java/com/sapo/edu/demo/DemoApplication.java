@@ -1,5 +1,6 @@
 package com.sapo.edu.demo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -12,6 +13,9 @@ public class DemoApplication implements CommandLineRunner {
 
     private final Atm bidvAtm;
 
+    @Value("${atm.bidv.finish-message}")
+    private String finishMessage;
+
     // Inject Atm qua constructor
     public DemoApplication(Atm bidvAtm) {
         this.bidvAtm = bidvAtm;
@@ -23,35 +27,22 @@ public class DemoApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-//        Customer customer = new Customer("ABC", "1234", new BigDecimal(5000000));
-
-        //Demo function
-//        Atm bidvAtm = new BidvAtm();
-//        bidvAtm.printCurrentMoney();
-//        bidvAtm.displayCustomerInfo(customer);
-//        bidvAtm.withDraw(customer, new BigDecimal(200000));
-//        bidvAtm.printCurrentMoney();
-//        bidvAtm.withDraw(customer, new BigDecimal(10000000));
-//        bidvAtm.printCurrentMoney();
-//        bidvAtm.deposit(customer,new BigDecimal(1000000));
-//        bidvAtm.printCurrentMoney();
-
         Scanner scanner = new Scanner(System.in);
 
         // Khởi tạo Customer từ màn hình console
-        System.out.println("=== CHÀO MỪNG ĐẾN VỚI BIDV ATM ===");
-        System.out.print("Nhập số tài khoản: ");
+        System.out.println("=== CHAO MUNG DEN VOI BIDV ATM ===");
+        System.out.print("Nhap so tai khoan: ");
         String acctNo = scanner.nextLine();
 
-        System.out.print("Nhập mã PIN: ");
+        System.out.print("Nhap ma PIN: ");
         String pin = scanner.nextLine();
 
-        System.out.print("Nhập số dư ban đầu: ");
+        System.out.print("Nhap so du ban dau: ");
         BigDecimal balance = scanner.nextBigDecimal();
 
         Customer customer = new Customer(acctNo, pin, balance);
 
-        System.out.println("\n--- BẮT ĐẦU GIAO DỊCH ---");
+        System.out.println("\n--- BAT DAU GIAO DICH ---");
         // Không dùng new BidvAtm() nữa, gọi thẳng instance đã được Spring cung cấp
         bidvAtm.printCurrentMoney();
         bidvAtm.displayCustomerInfo(customer);
@@ -65,7 +56,7 @@ public class DemoApplication implements CommandLineRunner {
         bidvAtm.deposit(customer, new BigDecimal(1000000));
         bidvAtm.printCurrentMoney();
 
-        System.out.println("Giao dịch kết thúc! Hãy kiểm tra file atm_log.txt để xem log hệ thống.");
+        System.out.println(finishMessage);
         scanner.close();
     }
 }

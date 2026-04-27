@@ -41,3 +41,21 @@ Current ATM money is 99800000
 Insufficient Balance
 Current ATM money is 99800000
 Current ATM money is 100800000
+Current ATM money is 100000000
+CustomerId: abc, balance: 10000000
+--- Dang thuc hien giao dich: RUT TIEN (200000) ---
+Current ATM money is 99800000
+--- Dang thuc hien giao dich: RUT TIEN (10000000) ---
+Insufficient Balance
+Current ATM money is 99800000
+--- Dang thuc hien giao dich: NOP TIEN (1000000) ---
+Current ATM money is 100800000
+Current ATM money is 100000000
+CustomerId: abc, balance: 1000000
+--- Dang thuc hien giao dich: RUT TIEN (200000) ---
+Current ATM money is 99800000
+--- Dang thuc hien giao dich: RUT TIEN (10000000) ---
+Insufficient Balance
+Current ATM money is 99800000
+--- Dang thuc hien giao dich: NOP TIEN (1000000) ---
+Current ATM money is 100800000

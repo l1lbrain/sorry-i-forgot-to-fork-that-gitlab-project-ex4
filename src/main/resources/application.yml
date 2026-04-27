@@ -1,3 +1,3 @@
-atm:
-  bidv:
-    initial-money: 100000000 # 100 triệu
+spring:
+  profiles:
+    active: dev #dev, prod /Mặc định chọn profile dev

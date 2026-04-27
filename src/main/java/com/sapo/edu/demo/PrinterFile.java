@@ -1,6 +1,7 @@
 package com.sapo.edu.demo;
 
 import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import java.io.FileWriter;
@@ -8,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @Component
-@Primary
+@Profile("prod")
 public class PrinterFile implements Printer{
     private static final String FILE_PATH = "atm_log.txt";
 

@@ -1,8 +1,10 @@
 package com.sapo.edu.demo;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
+@Profile("dev")
 public class PrinterConsole implements Printer {
     @Override
     public void printCustoner(Customer customer) {

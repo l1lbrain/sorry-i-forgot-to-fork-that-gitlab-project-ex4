@@ -19,7 +19,7 @@ public class BidvAtm implements Atm {
 
     @Override
     public void withDraw(Customer customer, BigDecimal amount) {
-        printer.printMessage("--- Đang thực hiện giao dịch: RÚT TIỀN (" + amount + ") ---");
+        printer.printMessage("--- Dang thuc hien giao dich: RUT TIEN (" + amount + ") ---");
         if (amount == null || amount.compareTo(new BigDecimal(0)) < 0) {
             printer.printMessage("Amount is invalid");
             return;
@@ -45,6 +45,7 @@ public class BidvAtm implements Atm {
 
     @Override
     public void deposit(Customer customer, BigDecimal amount) {
+        printer.printMessage("--- Dang thuc hien giao dich: NOP TIEN (" + amount + ") ---");
         if (amount == null || amount.compareTo(new BigDecimal(0)) <= 0) {
             printer.printMessage("Amount is invalid");
             return;
